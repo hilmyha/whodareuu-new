@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.simpleicons.org",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };
@@ -18,9 +22,15 @@ const withMDX = createMDX({
     remarkPlugins: [
       "remark-gfm",
       "remark-frontmatter",
+      "remark-toc",
+      "remark-heading-id",
       ["remark-mdx-frontmatter", { name: "frontmatter" }],
     ],
-    rehypePlugins: [["rehype-mdx-import-media"]],
+    rehypePlugins: [
+      "rehype-mdx-import-media",
+      "rehype-slug",
+      "rehype-pretty-code",
+    ],
   },
   extension: /\.(md|mdx)$/,
 });
