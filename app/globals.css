@@ -178,23 +178,15 @@
   }
 
   .mdx-content p {
-    @apply my-5 leading-tight text-justify;
+    @apply my-4 leading-relaxed text-justify;
   }
 
   .mdx-content pre {
     @apply my-3;
   }
 
-  .mdx-content ul {
-    @apply my-5;
-  }
-
-  .mdx-content ol {
+  .mdx-content ul .mdx-content ol .mdx-content li {
     @apply my-2;
-  }
-
-  .mdx-content li p {
-    @apply -my-2;
   }
 
   .mdx-content blockquote {
